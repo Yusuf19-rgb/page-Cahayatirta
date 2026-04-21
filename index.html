@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luminary Studio – Visual Design & 3D Art</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── NAVBAR ── -->
+<nav id="navbar">
+  <div class="nav-logo">Luminary.</div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Order Now</button>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-close" onclick="toggleMenu()">✕</div>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+  <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+  <a href="#contact" onclick="toggleMenu()" style="color:var(--accent2)">Order Now →</a>
+</div>
+
+<!-- ── HERO ── -->
+<section class="hero" id="home">
+  <div class="hero-bg-glow"></div>
+  <div class="hero-bg-glow2"></div>
+  
+  <div class="hero-left fade-up">
+    <div class="hero-badge">
+      <span></span> Open for Projects
+    </div>
+    <h1>Bring Your Ideas to Life with <span class="gradient-text">Stunning Visual Design</span></h1>
+    <p>We craft captivating visuals that elevate your brand and leave a lasting impression on every screen and surface.</p>
+    <div class="hero-tags">
+      <span class="hero-tag">✦ 3D Art</span>
+      <span class="hero-tag">✦ Graphic Design</span>
+      <span class="hero-tag">✦ Print Invitations</span>
+      <span class="hero-tag">✦ Digital Assets</span>
+    </div>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">✦ Order Now</a>
+      <a href="#portfolio" class="btn-secondary">View Portfolio →</a>
+    </div>
+  </div>
+  
+  <div class="hero-visual fade-up" style="transition-delay:0.2s">
+    <div class="hero-img-card">
+      <div class="img-placeholder art-1">
+        <div class="float-el" style="width:60px;height:60px;background:rgba(124,92,255,0.2);top:20%;left:20%"></div>
+        <div class="float-el" style="width:40px;height:40px;background:rgba(59,130,246,0.2);top:50%;right:25%;animation-delay:1s"></div>
+        <span style="position:relative;z-index:1;font-size:48px">🎨</span>
+      </div>
+      <div class="card-label">Featured Work</div>
+    </div>
+    <div class="hero-img-card">
+      <div class="img-placeholder art-2">
+        <span style="position:relative;z-index:1;font-size:36px">🧊</span>
+      </div>
+      <div class="card-label">3D Art</div>
+    </div>
+    <div class="hero-img-card">
+      <div class="img-placeholder art-3">
+        <span style="position:relative;z-index:1;font-size:36px">✉️</span>
+      </div>
+      <div class="card-label">Invitation</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SOCIAL PROOF ── -->
+<div class="proof-bar fade-up">
+  <div class="proof-item">
+    <div class="proof-icon">⭐</div>
+    <div class="proof-text">
+      <strong>100+</strong>
+      <span>Projects Done</span>
+    </div>
+  </div>
+  <div class="proof-divider"></div>
+  <div class="proof-item">
+    <div class="proof-icon">🤝</div>
+    <div class="proof-text">
+      <strong>50+</strong>
+      <span>Happy Clients</span>
+    </div>
+  </div>
+  <div class="proof-divider"></div>
+  <div class="proof-item">
+    <div class="proof-icon">🏆</div>
+    <div class="proof-text">
+      <strong>5.0</strong>
+      <span>Average Rating</span>
+    </div>
+  </div>
+  <div class="proof-divider"></div>
+  <div class="proof-item">
+    <div class="proof-icon">⚡</div>
+    <div class="proof-text">
+      <strong>48h</strong>
+      <span>Avg. Turnaround</span>
+    </div>
+  </div>
+</div>
+
+<!-- ── SERVICES ── -->
+<section id="services">
+  <div class="section-header fade-up">
+    <div class="section-label">What We Do</div>
+    <h2 class="section-title">Our Creative <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Services</span></h2>
+    <p class="section-sub">From concept to final delivery, we handle every visual touchpoint of your brand.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-up" style="transition-delay:0.05s">
+      <div class="service-icon">🧊</div>
+      <h3>3D Modeling & Art</h3>
+      <p>High-quality 3D modeling & rendering for products, characters, and immersive visuals that wow.</p>
+      <div class="service-link">Learn More <span>→</span></div>
+    </div>
+    <div class="service-card fade-up" style="transition-delay:0.1s">
+      <div class="service-icon">🎨</div>
+      <h3>Graphic Design</h3>
+      <p>Logos, branding, social media kits, and all digital assets designed with purpose and beauty.</p>
+      <div class="service-link">Learn More <span>→</span></div>
+    </div>
+    <div class="service-card fade-up" style="transition-delay:0.15s">
+      <div class="service-icon">💌</div>
+      <h3>Print Invitations</h3>
+      <p>Luxury wedding, event, and birthday invitations. Physical and digital — both equally stunning.</p>
+      <div class="service-link">Learn More <span>→</span></div>
+    </div>
+    <div class="service-card fade-up" style="transition-delay:0.2s">
+      <div class="service-icon">📱</div>
+      <h3>Digital Assets</h3>
+      <p>Motion graphics, UI design, presentation decks, and NFT-ready assets for the modern creator.</p>
+      <div class="service-link">Learn More <span>→</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PORTFOLIO ── -->
+<section id="portfolio">
+  <div class="portfolio-header fade-up">
+    <div>
+      <div class="section-label">Our Work</div>
+      <h2 class="section-title">Recent <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Projects</span></h2>
+    </div>
+    <div class="filter-tabs">
+      <button class="filter-tab active" onclick="filterPortfolio(this,'all')">All</button>
+      <button class="filter-tab" onclick="filterPortfolio(this,'3d')">3D</button>
+      <button class="filter-tab" onclick="filterPortfolio(this,'2d')">2D</button>
+      <button class="filter-tab" onclick="filterPortfolio(this,'print')">Print</button>
+      <button class="filter-tab" onclick="filterPortfolio(this,'digital')">Digital</button>
+    </div>
+  </div>
+  <div class="portfolio-grid fade-up">
+    <div class="portfolio-item" data-cat="3d"><div class="port-bg p1">🧊</div><div class="port-overlay"><h4>Crystal Product 3D</h4><span>3D Art</span></div></div>
+    <div class="portfolio-item" data-cat="print"><div class="port-bg p2">💌</div><div class="port-overlay"><h4>Royal Wedding Invite</h4><span>Print</span></div></div>
+    <div class="portfolio-item" data-cat="2d"><div class="port-bg p3">🎨</div><div class="port-overlay"><h4>Brand Identity</h4><span>2D Design</span></div></div>
+    <div class="portfolio-item" data-cat="digital"><div class="port-bg p4">📱</div><div class="port-overlay"><h4>Social Media Kit</h4><span>Digital</span></div></div>
+    <div class="portfolio-item" data-cat="3d"><div class="port-bg p5">🌀</div><div class="port-overlay"><h4>Abstract 3D Scene</h4><span>3D Art</span></div></div>
+    <div class="portfolio-item" data-cat="print"><div class="port-bg p6">✉️</div><div class="port-overlay"><h4>Birthday Invitation</h4><span>Print</span></div></div>
+    <div class="portfolio-item" data-cat="2d"><div class="port-bg p7">✦</div><div class="port-overlay"><h4>Logo & Branding</h4><span>2D Design</span></div></div>
+    <div class="portfolio-item" data-cat="digital"><div class="port-bg p8">🎬</div><div class="port-overlay"><h4>Motion Graphic</h4><span>Digital</span></div></div>
+  </div>
+</section>
+
+<!-- ── WHY US ── -->
+<section id="why">
+  <div class="why-grid">
+    <div class="why-left fade-up">
+      <div class="section-label">Why Choose Us</div>
+      <h2 class="section-title">Design That <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Speaks</span> for Itself</h2>
+      <p class="section-sub">We don't just make things look pretty — we craft visual strategies that convert and captivate.</p>
+      <div class="why-left-cta">
+        <a href="#contact" class="btn-primary">Start a Project →</a>
+      </div>
+    </div>
+    <div class="why-features fade-up" style="transition-delay:0.15s">
+      <div class="why-feat">
+        <div class="feat-icon">🎯</div>
+        <h4>Original & Custom</h4>
+        <p>Every piece is made from scratch — tailored exactly to your vision.</p>
+      </div>
+      <div class="why-feat">
+        <div class="feat-icon">⚡</div>
+        <h4>Fast Turnaround</h4>
+        <p>48-hour standard delivery. Rush options available for urgent projects.</p>
+      </div>
+      <div class="why-feat">
+        <div class="feat-icon">♾️</div>
+        <h4>Unlimited Revisions</h4>
+        <p>We iterate until you love it. Your satisfaction is non-negotiable.</p>
+      </div>
+      <div class="why-feat">
+        <div class="feat-icon">💎</div>
+        <h4>Premium Quality</h4>
+        <p>Print-ready files, high-resolution exports, and pixel-perfect delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section id="pricing">
+  <div class="section-header fade-up" style="text-align:center">
+    <div class="section-label" style="justify-content:center">Transparent Pricing</div>
+    <h2 class="section-title">Simple, <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Fair</span> Plans</h2>
+    <p class="section-sub" style="margin: 0 auto;">No hidden fees, no surprises. Just great design at an honest price.</p>
+  </div>
+  <div class="pricing-grid fade-up">
+    <div class="pricing-card">
+      <div class="pricing-plan">Basic</div>
+      <div class="pricing-price">$49</div>
+      <div class="pricing-price-note">Per project · One revision</div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> 1 Design Concept</li>
+        <li><span class="feat-check">✓</span> 1 Revision Round</li>
+        <li><span class="feat-check">✓</span> JPG / PNG Delivery</li>
+        <li><span class="feat-check">✓</span> 5-Day Turnaround</li>
+        <li style="opacity:0.35"><span>✕</span> Source Files</li>
+        <li style="opacity:0.35"><span>✕</span> Priority Support</li>
+      </ul>
+      <a href="#contact" class="btn-secondary" style="text-align:center;justify-content:center">Get Started</a>
+    </div>
+    <div class="pricing-card featured">
+      <div class="featured-badge">⭐ Most Popular</div>
+      <div class="pricing-plan">Standard</div>
+      <div class="pricing-price">$99</div>
+      <div class="pricing-price-note">Per project · 3 revisions</div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> 3 Design Concepts</li>
+        <li><span class="feat-check">✓</span> 3 Revision Rounds</li>
+        <li><span class="feat-check">✓</span> All File Formats</li>
+        <li><span class="feat-check">✓</span> 48-Hour Turnaround</li>
+        <li><span class="feat-check">✓</span> Source Files Included</li>
+        <li style="opacity:0.35"><span>✕</span> Priority Support</li>
+      </ul>
+      <a href="#contact" class="btn-primary" style="text-align:center;justify-content:center">Order Now</a>
+    </div>
+    <div class="pricing-card">
+      <div class="pricing-plan">Premium</div>
+      <div class="pricing-price">$199</div>
+      <div class="pricing-price-note">Per project · Unlimited</div>
+      <ul class="pricing-features">
+        <li><span class="feat-check">✓</span> Unlimited Concepts</li>
+        <li><span class="feat-check">✓</span> Unlimited Revisions</li>
+        <li><span class="feat-check">✓</span> All File Formats</li>
+        <li><span class="feat-check">✓</span> 24-Hour Turnaround</li>
+        <li><span class="feat-check">✓</span> Source Files Included</li>
+        <li><span class="feat-check">✓</span> Priority Support</li>
+      </ul>
+      <a href="#contact" class="btn-secondary" style="text-align:center;justify-content:center">Get Started</a>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section id="testimonials">
+  <div class="section-header fade-up">
+    <div class="section-label">Client Love</div>
+    <h2 class="section-title">What Clients <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Say</span></h2>
+    <p class="section-sub">Real words from real clients who trusted us with their vision.</p>
+  </div>
+  <div class="testi-grid fade-up">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Absolutely mind-blowing 3D work. The product render was so realistic our clients thought it was a photo. Turnaround was incredibly fast too!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar av1">👤</div>
+        <div>
+          <div class="testi-name">Sarah M.</div>
+          <div class="testi-role">Brand Manager, TechCo</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Our wedding invitations were the talk of the reception. Everyone wanted to know who designed them. Beyond beautiful — pure art!"</p>
+      <div class="testi-author">
+        <div class="testi-avatar av2">👤</div>
+        <div>
+          <div class="testi-name">Riana & Dio</div>
+          <div class="testi-role">Married Couple, Jakarta</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-quote">"Hired them for a full brand refresh and the results were staggering. Professional, responsive, and the quality is just exceptional."</p>
+      <div class="testi-author">
+        <div class="testi-avatar av3">👤</div>
+        <div>
+          <div class="testi-name">Kevin T.</div>
+          <div class="testi-role">Founder, Arca Studio</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section fade-up">
+  <div class="section-label" style="justify-content:center">Let's Work Together</div>
+  <h2 class="section-title">Ready to Start Your <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Project?</span></h2>
+  <p class="section-sub">Let's turn your ideas into something extraordinary. First consultation is always free.</p>
+  <div class="cta-buttons">
+    <a href="#contact" class="btn-primary">✦ Order Now</a>
+    <a href="#contact" class="btn-secondary">Free Consultation →</a>
+  </div>
+</section>
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <div class="section-header fade-up">
+    <div class="section-label">Get in Touch</div>
+    <h2 class="section-title">Let's <span style="background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Connect</span></h2>
+    <p class="section-sub">Fill the form or reach us directly — we reply within 2 hours.</p>
+  </div>
+  <div class="contact-grid fade-up">
+    <div class="contact-info">
+      <h3>We'd love to hear about your project</h3>
+      <p>Whether you have a clear vision or just a vague idea — we'll help you shape it into something remarkable.</p>
+      <div class="contact-detail">
+        <div class="contact-icon">📍</div>
+        <div class="contact-detail-text">
+          <span>Location</span>
+          <strong>Surabaya, East Java, Indonesia</strong>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">📧</div>
+        <div class="contact-detail-text">
+          <span>Email</span>
+          <strong>hello@luminarystudio.id</strong>
+        </div>
+      </div>
+      <div class="contact-detail">
+        <div class="contact-icon">⏱️</div>
+        <div class="contact-detail-text">
+          <span>Response Time</span>
+          <strong>Within 2 hours</strong>
+        </div>
+      </div>
+      <a href="https://wa.me/6281234567890" class="wa-btn" target="_blank">
+        <span>💬</span> Chat on WhatsApp
+      </a>
+    </div>
+    <div class="contact-form fade-up" style="transition-delay:0.15s">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" placeholder="John Doe">
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="john@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Service Needed</label>
+        <select>
+          <option value="">Choose a service...</option>
+          <option>3D Modeling & Art</option>
+          <option>Graphic Design</option>
+          <option>Print Invitation</option>
+          <option>Digital Assets</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Tell Us About Your Project</label>
+        <textarea placeholder="Describe your idea, timeline, and budget..."></textarea>
+      </div>
+      <button class="btn-primary" style="width:100%;justify-content:center" onclick="handleSubmit(event)">
+        Send Message ✦
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <div class="footer-logo">Luminary.</div>
+      <p class="footer-tagline">Premium creative studio crafting visual experiences that inspire and convert.</p>
+      <div class="footer-social">
+        <a href="#" class="social-btn">𝕏</a>
+        <a href="#" class="social-btn">in</a>
+        <a href="#" class="social-btn">📸</a>
+        <a href="#" class="social-btn">🎨</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="#services">3D Art & Modeling</a></li>
+        <li><a href="#services">Graphic Design</a></li>
+        <li><a href="#services">Print Invitations</a></li>
+        <li><a href="#services">Digital Assets</a></li>
+        <li><a href="#services">Brand Identity</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Refund Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Luminary Studio. All rights reserved.</p>
+    <p>Made with ♥ in Surabaya</p>
+  </div>
+</footer>
+
+<!-- ── FLOATING WA ── -->
+<a href="https://wa.me/6281234567890" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
+
+<script src="main.js"></script>
+</body>
+</html>
