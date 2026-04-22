@@ -293,6 +293,9 @@ nav {
 }
 .hero-img-card { transition: transform 0.3s; }
 .hero-img-card:hover { transform: scale(1.02); }
+#card-3d { min-height: 180px; cursor: grab; }
+#card-3d:active { cursor: grabbing; }
+#three-canvas { display: block; width: 100% !important; height: 100% !important; min-height: 180px; }
 
 /* Colorful placeholder art */
 .art-1 { background: linear-gradient(135deg, #1a0533 0%, #2d1066 50%, #0a1a3d 100%); }
@@ -504,9 +507,13 @@ section {
   cursor: pointer;
   aspect-ratio: 4/3;
   border: 1px solid var(--border);
+  display: block;
 }
 .portfolio-item .port-bg {
-  width: 100%; height: 100%;
+  position: absolute;
+  inset: 0;
+  width: 100%; 
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -537,6 +544,50 @@ section {
   color: var(--accent2);
   font-weight: 500;
   letter-spacing: 0.5px;
+}
+
+/* ── PORTFOLIO NAV BUTTONS ── */
+.port-nav {
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s;
+  z-index: 10;
+}
+.portfolio-item:hover .port-nav,
+.portfolio-item.touch-active .port-nav {
+  opacity: 1;
+  pointer-events: all;
+}
+.port-btn {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(124,92,255,0.5);
+  background: rgba(10,10,11,0.65);
+  backdrop-filter: blur(8px);
+  color: var(--white);
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  line-height: 1;
+}
+.port-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  transform: scale(1.15);
+  box-shadow: 0 0 14px var(--accent-glow);
+}
+.port-btn:active {
+  transform: scale(0.95);
 }
 
 /* Port color schemes */

@@ -66,11 +66,10 @@
       </div>
       <div class="card-label">Featured Work</div>
     </div>
-    <div class="hero-img-card">
-      <div class="img-placeholder art-2">
-        <span style="position:relative;z-index:1;font-size:36px">🧊</span>
-      </div>
-      <div class="card-label">3D Art</div>
+    <div class="hero-img-card" id="card-3d" style="position:relative;cursor:grab;">
+      <canvas id="three-canvas" style="width:100%;height:100%;display:block;border-radius:16px;"></canvas>
+      <div class="card-label">3D Art · Drag to Rotate</div>
+      <div style="position:absolute;top:10px;right:10px;font-size:11px;color:rgba(167,139,250,0.7);font-family:'DM Sans',sans-serif;font-weight:500;letter-spacing:0.5px;pointer-events:none;">⟳ Interactive</div>
     </div>
     <div class="hero-img-card">
       <div class="img-placeholder art-3">
@@ -166,15 +165,71 @@
       <button class="filter-tab" onclick="filterPortfolio(this,'digital')">Digital</button>
     </div>
   </div>
-  <div class="portfolio-grid fade-up">
-    <div class="portfolio-item" data-cat="3d"><div class="port-bg p1">🧊</div><div class="port-overlay"><h4>Crystal Product 3D</h4><span>3D Art</span></div></div>
-    <div class="portfolio-item" data-cat="print"><div class="port-bg p2">💌</div><div class="port-overlay"><h4>Royal Wedding Invite</h4><span>Print</span></div></div>
-    <div class="portfolio-item" data-cat="2d"><div class="port-bg p3">🎨</div><div class="port-overlay"><h4>Brand Identity</h4><span>2D Design</span></div></div>
-    <div class="portfolio-item" data-cat="digital"><div class="port-bg p4">📱</div><div class="port-overlay"><h4>Social Media Kit</h4><span>Digital</span></div></div>
-    <div class="portfolio-item" data-cat="3d"><div class="port-bg p5">🌀</div><div class="port-overlay"><h4>Abstract 3D Scene</h4><span>3D Art</span></div></div>
-    <div class="portfolio-item" data-cat="print"><div class="port-bg p6">✉️</div><div class="port-overlay"><h4>Birthday Invitation</h4><span>Print</span></div></div>
-    <div class="portfolio-item" data-cat="2d"><div class="port-bg p7">✦</div><div class="port-overlay"><h4>Logo & Branding</h4><span>2D Design</span></div></div>
-    <div class="portfolio-item" data-cat="digital"><div class="port-bg p8">🎬</div><div class="port-overlay"><h4>Motion Graphic</h4><span>Digital</span></div></div>
+  <div class="portfolio-grid fade-up" id="portfolioGrid">
+    <div class="portfolio-item" data-cat="3d">
+      <div class="port-bg p1">🧊</div>
+      <div class="port-overlay"><h4>Crystal Product 3D</h4><span>3D Art</span></div>
+      <div class="port-nav">
+        <button class="port-btn prev-btn" onclick="portNav(this,'prev')">&#8592;</button>
+        <button class="port-btn next-btn" onclick="portNav(this,'next')">&#8594;</button>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="print">
+      <div class="port-bg p2">💌</div>
+      <div class="port-overlay"><h4>Royal Wedding Invite</h4><span>Print</span></div>
+      <div class="port-nav">
+        <button class="port-btn prev-btn" onclick="portNav(this,'prev')">&#8592;</button>
+        <button class="port-btn next-btn" onclick="portNav(this,'next')">&#8594;</button>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="2d">
+      <div class="port-bg p3">🎨</div>
+      <div class="port-overlay"><h4>Brand Identity</h4><span>2D Design</span></div>
+      <div class="port-nav">
+        <button class="port-btn prev-btn" onclick="portNav(this,'prev')">&#8592;</button>
+        <button class="port-btn next-btn" onclick="portNav(this,'next')">&#8594;</button>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="digital">
+      <div class="port-bg p4">📱</div>
+      <div class="port-overlay"><h4>Social Media Kit</h4><span>Digital</span></div>
+      <div class="port-nav">
+        <button class="port-btn prev-btn" onclick="portNav(this,'prev')">&#8592;</button>
+        <button class="port-btn next-btn" onclick="portNav(this,'next')">&#8594;</button>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="3d">
+      <div class="port-bg p5">🌀</div>
+      <div class="port-overlay"><h4>Abstract 3D Scene</h4><span>3D Art</span></div>
+      <div class="port-nav">
+        <button class="port-btn prev-btn" onclick="portNav(this,'prev')">&#8592;</button>
+        <button class="port-btn next-btn" onclick="portNav(this,'next')">&#8594;</button>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="print">
+      <div class="port-bg p6">✉️</div>
+      <div class="port-overlay"><h4>Birthday Invitation</h4><span>Print</span></div>
+      <div class="port-nav">
+        <button class="port-btn prev-btn" onclick="portNav(this,'prev')">&#8592;</button>
+        <button class="port-btn next-btn" onclick="portNav(this,'next')">&#8594;</button>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="2d">
+      <div class="port-bg p7">✦</div>
+      <div class="port-overlay"><h4>Logo & Branding</h4><span>2D Design</span></div>
+      <div class="port-nav">
+        <button class="port-btn prev-btn" onclick="portNav(this,'prev')">&#8592;</button>
+        <button class="port-btn next-btn" onclick="portNav(this,'next')">&#8594;</button>
+      </div>
+    </div>
+    <div class="portfolio-item" data-cat="digital">
+      <div class="port-bg p8">🎬</div>
+      <div class="port-overlay"><h4>Motion Graphic</h4><span>Digital</span></div>
+      <div class="port-nav">
+        <button class="port-btn prev-btn" onclick="portNav(this,'prev')">&#8592;</button>
+        <button class="port-btn next-btn" onclick="portNav(this,'next')">&#8594;</button>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -224,13 +279,13 @@
   <div class="pricing-grid fade-up">
     <div class="pricing-card">
       <div class="pricing-plan">Basic</div>
-      <div class="pricing-price">$49</div>
-      <div class="pricing-price-note">Per project · One revision</div>
+      <div class="pricing-price">200K</div>
+      <div class="pricing-price-note">Per project · 3 revision</div>
       <ul class="pricing-features">
-        <li><span class="feat-check">✓</span> 1 Design Concept</li>
-        <li><span class="feat-check">✓</span> 1 Revision Round</li>
-        <li><span class="feat-check">✓</span> JPG / PNG Delivery</li>
-        <li><span class="feat-check">✓</span> 5-Day Turnaround</li>
+        <li><span class="feat-check">✓</span> 3 konsep desain</li>
+        <li><span class="feat-check">✓</span> 3x revisi</li>
+        <li><span class="feat-check">✓</span> JPG / PNG diterima</li>
+        <li><span class="feat-check">✓</span> 7 Hari pengerjaan</li>
         <li style="opacity:0.35"><span>✕</span> Source Files</li>
         <li style="opacity:0.35"><span>✕</span> Priority Support</li>
       </ul>
@@ -239,13 +294,13 @@
     <div class="pricing-card featured">
       <div class="featured-badge">⭐ Most Popular</div>
       <div class="pricing-plan">Standard</div>
-      <div class="pricing-price">$99</div>
-      <div class="pricing-price-note">Per project · 3 revisions</div>
+      <div class="pricing-price">400k</div>
+      <div class="pricing-price-note">Per project · 6 revisions</div>
       <ul class="pricing-features">
-        <li><span class="feat-check">✓</span> 3 Design Concepts</li>
-        <li><span class="feat-check">✓</span> 3 Revision Rounds</li>
-        <li><span class="feat-check">✓</span> All File Formats</li>
-        <li><span class="feat-check">✓</span> 48-Hour Turnaround</li>
+        <li><span class="feat-check">✓</span> 6 konsep desain</li>
+        <li><span class="feat-check">✓</span> 6x revisi</li>
+        <li><span class="feat-check">✓</span> Semua format File</li>
+        <li><span class="feat-check">✓</span> 3 Hari pengerjaan</li>
         <li><span class="feat-check">✓</span> Source Files Included</li>
         <li style="opacity:0.35"><span>✕</span> Priority Support</li>
       </ul>
@@ -253,13 +308,13 @@
     </div>
     <div class="pricing-card">
       <div class="pricing-plan">Premium</div>
-      <div class="pricing-price">$199</div>
+      <div class="pricing-price">1 Jt</div>
       <div class="pricing-price-note">Per project · Unlimited</div>
       <ul class="pricing-features">
-        <li><span class="feat-check">✓</span> Unlimited Concepts</li>
-        <li><span class="feat-check">✓</span> Unlimited Revisions</li>
-        <li><span class="feat-check">✓</span> All File Formats</li>
-        <li><span class="feat-check">✓</span> 24-Hour Turnaround</li>
+        <li><span class="feat-check">✓</span> bebas konsep desain</li>
+        <li><span class="feat-check">✓</span> bebas revisi</li>
+        <li><span class="feat-check">✓</span> Semua format File</li>
+        <li><span class="feat-check">✓</span> 1 hari pengerjaan</li>
         <li><span class="feat-check">✓</span> Source Files Included</li>
         <li><span class="feat-check">✓</span> Priority Support</li>
       </ul>
@@ -345,7 +400,7 @@
         <div class="contact-icon">📧</div>
         <div class="contact-detail-text">
           <span>Email</span>
-          <strong>hello@luminarystudio.id</strong>
+          <strong>warkop3d45@gmail.com</strong>
         </div>
       </div>
       <div class="contact-detail">
@@ -355,7 +410,7 @@
           <strong>Within 2 hours</strong>
         </div>
       </div>
-      <a href="https://wa.me/6281234567890" class="wa-btn" target="_blank">
+      <a href="https://wa.me/6285735440463" class="wa-btn" target="_blank">
         <span>💬</span> Chat on WhatsApp
       </a>
     </div>
@@ -396,7 +451,7 @@
 <footer>
   <div class="footer-grid">
     <div>
-      <div class="footer-logo">Luminary.</div>
+      <div class="footer-logo">Cahaya Tirta.</div>
       <p class="footer-tagline">Premium creative studio crafting visual experiences that inspire and convert.</p>
       <div class="footer-social">
         <a href="#" class="social-btn">𝕏</a>
@@ -436,14 +491,16 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <p>© 2025 Luminary Studio. All rights reserved.</p>
+    <p>© 2025 Cahaya Tirta. All rights reserved.</p>
     <p>Made with ♥ in Surabaya</p>
   </div>
 </footer>
 
 <!-- ── FLOATING WA ── -->
-<a href="https://wa.me/6281234567890" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
+<a href="https://wa.me/6285735440463" class="wa-float" target="_blank" title="Chat on WhatsApp">💬</a>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="scene3d.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
